@@ -20,6 +20,10 @@ public class RoomService {
         this.roomRepository = roomRepository;
     }
 
+    public Optional<Room> getRoomById(Long id) {
+        return roomRepository.findById(id);
+    }
+
     public Room updateRoom(Long id, Room roomDetails) {
         Optional<Room> roomOptional = roomRepository.findById(id);
 
